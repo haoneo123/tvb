@@ -311,7 +311,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 0,
-      "ext": "https://www.xb6v.com/"
+      "ext": "./lib/6V.js"
     },
     {
       "key": "csp_nkvlog",
