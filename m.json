@@ -307,7 +307,7 @@
       "key": "新6V",
       "name": "🧲┃新6V┃磁力",
       "type": 3,
-      "api": "csp_SixV",
+      "api": "./lib/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 0,
