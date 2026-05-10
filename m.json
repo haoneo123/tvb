@@ -2045,7 +2045,7 @@
       "key": "js_6V",
       "name": "✡️六维磁力┃Js",
       "type": 3,
-      "api": "./lib/drpy2.min.js",
+      "api": "csp_SixV",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
