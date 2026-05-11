@@ -1,0 +1,75 @@
+{
+  "spider": "./jar/custom.jar",
+  "wallpaper": "https://example.com/wallpaper.jpg",
+  "warningText": "仅供学习测试使用",
+  
+  "sites": [
+    {
+      "key": "site_6v",
+      "name": "🎬 6V电影",
+      "type": 3,
+      "api": "csp_XPath",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": {
+        "homeUrl": "https://www.hao6v.tv/",
+        "detailUrl": "https://www.hao6v.tv{vid}",
+        "searchUrl": "https://www.hao6v.tv/e/search/index.php;post;show=title&keyboard={wd}",
+        
+        "class_parse": ".bg a&&a&&Text;.bg a&&href;.*/(\\w+)/;1",
+        
+        "cateManual": {
+          "最新电影": "dy",
+          "国语配音": "gydy", 
+          "动漫新番": "zydy",
+          "经典高清": "gq",
+          "动画电影": "jddy",
+          "国剧": "dlz",
+          "日韩剧": "rj",
+          "欧美剧": "mj"
+        },
+        
+        "vod_node": "//ul[@class='lt']/li",
+        "vod_name": "a&&title",
+        "vod_pic": "img&&src",
+        "vod_id": "a&&href",
+        "vod_remarks": "span&&Text",
+        
+        "dt_node": "//div[@class='box']",
+        "dt_name": "//h3//text()",
+        "dt_pic": "//img&&src",
+        "dt_desc": "//p[1]//text()",
+        "dt_from_node": "//div[@class='down']//a",
+        "dt_from_name": "/text()",
+        "dt_url_node": "//div[@class='down']//a",
+        "dt_url": "/@href"
+      }
+    }
+  ],
+  
+  "parses": [
+    {
+      "name": "Json并发",
+      "type": 2,
+      "url": "Parallel"
+    },
+    {
+      "name": "解析1",
+      "type": 1,
+      "url": "https://jx.jsonplayer.com/player/?url="
+    }
+  ],
+  
+  "lives": [
+    {
+      "group": "直播",
+      "channels": [
+        {
+          "name": "CCTV-1",
+          "urls": ["http://example.com/cctv1.m3u8"]
+        }
+      ]
+    }
+  ]
+}
